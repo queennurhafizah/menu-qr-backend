@@ -27,7 +27,11 @@ async function bootstrap() {
   });
 
   // CORS
-  app.enableCors();
+  app.enableCors({
+    origin: true,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
+  });
 
   // Swagger Documentation
   const config = new DocumentBuilder()
