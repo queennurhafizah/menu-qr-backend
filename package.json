@@ -7,10 +7,10 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "prisma generate",
-    "build": "node node_modules/@nestjs/cli/bin/nest.js build",
+    "build": "prisma generate && nest build",
     "start:dev": "node node_modules/@nestjs/cli/bin/nest.js start --watch",
     "start": "node dist/src/main.js",
-    "start:prod": "node dist/src/main.js",
+    "start:prod": "node dist/src/main",
     "start:railway": "npm run build && node dist/src/main.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
